@@ -10,16 +10,25 @@ var specialCharacters = ['@',  '%',  '+',  '\\',  '/',  "'",  '!',  '#',  '$',  
 // step 1: get characters req's
 function getPasswordOptions() {
 // conditions (number of letters, special symbols, etc.)
-  var length = parseInt(prompt("How many characters are required for your password? (8-128 characters"))
-  if (length < 8)
-    var length = parseInt(prompt("Re-Enter Length: you must request a password greater than 8 characters!"))
-  else if (length > 128)
-    var length = parseInt(prompt("you must request a password with less than 128 characters!"))
-  var special = confirm("Does your password need special characters?")
-  var numbers = confirm("Does your password need numbers 0-9?")
+  var passLength = parseInt(prompt("How many characters are required for your password? (8-128 characters"));
+  if (passLength < 8)
+    var passLength = parseInt(prompt("Re-Enter Length: you must request a password greater than 8 characters!"));
+  else if (passLength > 128)
+    var passLength = parseInt(prompt("you must request a password with less than 128 characters!"));
+  var special = confirm("Does your password need special characters?");
+  var numbers = confirm("Does your password need numbers 0-9?");
+// step 2: put all the req'ed chars into 1 array. 
+  var randArray = []
+  var randArray = randArray.concat(lowerCaseCharacters)
+  if (special = true)
+    var randArray = randArray.concat(specialCharacters)
+  else if (numbers = true)
+    var randArray = randArray.concat(numerals)
+  else
+    return
+console.log(randArray)
 
 }
-
 
 
 // function getRandom() {
@@ -40,5 +49,7 @@ function getPasswordOptions() {
 // }
 // Add event listener to generate button when this is clicked, it will run writePassword
 generateBtn.addEventListener("click", getPasswordOptions);
+
+
 // on click i want:
   // 
