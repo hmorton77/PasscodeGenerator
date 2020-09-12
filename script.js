@@ -7,37 +7,38 @@ var lowerCaseCharacters = ["a",  "b",  "c", "d", "e", "f", "g", "h", "i", "j", "
 var numerals = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var specialCharacters = ['@',  '%',  '+',  '\\',  '/',  "'",  '!',  '#',  '$',  '^',  '?',  ':',  ',',  ')',  '(',  '}',  '{',  ']',  '[',  '~',  '-',  '_',  '.'];
 
+// step 1: get characters req's
 function getPasswordOptions() {
 // conditions (number of letters, special symbols, etc.)
   var length = parseInt(prompt("How many characters are required for your password? (8-128 characters"))
   if (length < 8)
-    alert("you must request a password greater than 8 character")
+    var length = parseInt(prompt("Re-Enter Length: you must request a password greater than 8 characters!"))
   else if (length > 128)
-    alert("you must request a password with less than 128 characters!")
-  else 
-    return
-  
+    var length = parseInt(prompt("you must request a password with less than 128 characters!"))
   var special = confirm("Does your password need special characters?")
   var numbers = confirm("Does your password need numbers 0-9?")
-}
-// run the function
-getPasswordOptions()
-
-function getRandom() {
 
 }
 
-function generatePassword
-  var result =[]
-  result[Math.random ]
-// get an array of all of the options
 
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+// function getRandom() {
 
-}
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// }
+
+// function generatePassword
+//   var result =[]
+//   result[Math.random ]
+// // get an array of all of the options
+
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+// }
+// Add event listener to generate button when this is clicked, it will run writePassword
+generateBtn.addEventListener("click", getPasswordOptions);
+// on click i want:
+  // 
