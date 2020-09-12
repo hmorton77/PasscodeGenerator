@@ -20,12 +20,11 @@ function getPasswordOptions() {
 // step 2: put all the req'ed chars into 1 array. 
   var randArray = []
   var randArray = randArray.concat(lowerCaseCharacters)
-  if (special = true)
+  if (special) 
     var randArray = randArray.concat(specialCharacters)
-  else if (numbers = true)
+  if (numbers)
     var randArray = randArray.concat(numerals)
-  else
-    return
+
 console.log(randArray)
 
 }
