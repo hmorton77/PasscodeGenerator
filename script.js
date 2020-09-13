@@ -33,11 +33,11 @@ function getPassword() {
   randChar = ""
   for (var i = 0; i < passLength; i++)  {
     randNum = Math.floor(random(0,(randArray.length-1))) + 1;
-    console.log(randNum)
-    console.log(randArray[randNum])
     randChar = randChar + randArray[randNum]
   }
   console.log(randChar)
+  var password = document.getElementById("password")
+  password.textContent = randChar
     
     
   
