@@ -14,12 +14,13 @@ var numerals = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function random (min, max) {
   return min + Math.random() * (max - min);
 }
+// password generator function
 function getPassword() {
 // step 1: get characters req's
 // conditions (number of characters, special symbols, etc.)
   var passLength = parseInt(prompt("How many characters are required for your password? (8-128 characters)"));
-  while (passLength < 8 || passLength > 128) {
-    var passLength = parseInt(prompt("Re-Enter Length: you must request a password within the character limits! (8-128 characters)"))
+  while (passLength < 8 || passLength > 128 || Number.isInteger(passLength) == false) {
+    var passLength = parseInt(prompt("Re-Enter Length: you must request an INTEGER within the character limits! (8-128 characters)"))
   }
   var special = confirm("Does your password need special characters?");
   var numbers = confirm("Does your password need numbers 0-9?");
