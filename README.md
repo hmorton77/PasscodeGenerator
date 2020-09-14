@@ -7,3 +7,9 @@ the number will be used to index the array, and pull the corresponding character
 
 this is done consecutively in a loop, until the amount of characters are generated for the user's required length. 
 when complete, the password will be given in the read only text area. 
+
+
+![pre-generated image](./passwordGenSS1.jpg)
+
+![post-generated image](./passwordGenSS2.jpg)
+
