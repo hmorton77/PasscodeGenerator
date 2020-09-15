@@ -18,12 +18,14 @@ function getPassword() {
   while (passLength < 8 || passLength > 128 || Number.isInteger(passLength) == false) {
     var passLength = parseInt(prompt("Re-Enter Length: you must request an INTEGER within the character limits! (8-128 characters)"))
   }
+  var upper = confirm("Does your password need both cases for letters? (Default: lowercase only)");
   var special = confirm("Does your password need special characters?");
   var numbers = confirm("Does your password need numbers 0-9?");
   
 // step 2: put all the req'ed chars into 1 array. 
   var randArray = lowerCaseCharacters
-  var randArray = randArray.concat(upperCaseCharacters)
+  if (upper)
+    var randArray = randArray.concat(upperCaseCharacters)
   if (special) 
     var randArray = randArray.concat(specialCharacters)
   if (numbers)
