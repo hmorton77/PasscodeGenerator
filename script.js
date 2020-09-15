@@ -24,7 +24,7 @@ function getPassword() {
   
   
 // step 2: put all the req'ed chars into 1 array. 
-  var randArray = lowerCaseCharacters
+  var randArray = lowerCaseCharacters;
   if (upper);
     randArray = randArray.concat(upperCaseCharacters);
   if (special); 
@@ -33,13 +33,13 @@ function getPassword() {
     randArray = randArray.concat(numerals);
 
 // step 3: from the array, randomly select x characters, x being the amount of characters req'ed  
-  randChar = ""
+  randChar = "";
   for (var i = 0; i < passLength; i++)  {
     randNum = Math.floor(random(0,(randArray.length-1))) + 1;
     randChar = randChar + randArray[randNum];
   }
-  console.log(randChar)
-  var password = document.getElementById("password")
-  password.textContent = randChar
+  console.log(randChar);
+  var password = document.getElementById("password");
+  password.textContent = randChar;
 }
 generateBtn.addEventListener("click", getPassword);
